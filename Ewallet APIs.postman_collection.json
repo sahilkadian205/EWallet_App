@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "45628268-0325-4545-ac24-199bca0814f2",
+		"name": "Ewallet APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sign-Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phoneNum\":\"8080808080\",\r\n    \"userName\":\"newuser\",\r\n    \"userPassword\":\"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/ewallet/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ewallet",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign-In",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phoneNum\":\"2020202020\",\r\n    \"userPassword\":\"654125\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/ewallet/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ewallet",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/ewallet/user/2020202020",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ewallet",
+						"user",
+						"2020202020"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User Details",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phoneNum\":\"2020202020\",\r\n    \"userName\":\"abc1234\",\r\n    \"userPassword\":\"654125\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/ewallet/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ewallet",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Money",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phoneNum\":\"2020202020\",\r\n    \"amountToAdd\":\"1000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/ewallet/addmoney",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ewallet",
+						"addmoney"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer Money",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phoneNum\":\"2020202020\",\r\n    \"toTransferWalletId\":\"2020202021\",\r\n    \"amountToTransfer\":\"20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/ewallet/transfermoney",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ewallet",
+						"transfermoney"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transactions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phoneNum\": \"2020202020\",\r\n    \"userPassword\": \"12345\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/ewallet/transactions/2020202020",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ewallet",
+						"transactions",
+						"2020202020"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
